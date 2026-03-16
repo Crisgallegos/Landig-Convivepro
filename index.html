@@ -3,6 +3,30 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- SEO Técnico & Meta Tags -->
+    <title>ConvivePro | Software de Gestión de Convivencia Escolar</title>
+    <meta name="description" content="La plataforma profesional para registrar incidentes, gestionar evidencias y analizar casos de convivencia escolar. Diseñada para directivos y equipos psicosociales.">
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://convivepro.com/">
+    <meta property="og:title" content="ConvivePro | Digitaliza la convivencia escolar">
+    <meta property="og:description" content="Centraliza expedientes, evidencia y normativas en un ecosistema digital amigable.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/aida-public/AB6AXuCEoNIdALMoLtoewdOShHpWfyVYtLTlRx-cwFvhoXZrJABEU78N0Hd9RUd4FpQnFxAinWHAWOCDuGUudUWrpkJiJDg0v3JVyNCWrZOlrTKcapd6ALLuYJCiJPnRKI5YzpWE_avmJM1Quj7kX5otRYfnCLyPb6-nb7dyK5kUZ8CCkANSzLFcFhICfnkzuzmFHII2kn_bdV5sxCNy-fYzUX1Rcw5pieyVizTEZtWt4m6A6ZWELYydJ6QME4XSvek93h7PThjp952c6JA">
+    
+    <!-- Favicon dinámico (Icono base 64 de Analytics de la app) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+    
+    <!-- Evitar parpadeos de FOUC con el dark mode -->
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -14,13 +38,13 @@
                     colors: {
                         cp: {
                             brand: {
-                                DEFAULT: '#1E3A5F',     // Azul marino oscuro
+                                DEFAULT: '#1E3A5F',
                                 hover: '#2A4E7F',
-                                muted: '#EEF4FB',       // Fondo azul claro
+                                muted: '#EEF4FB',
                                 soft: 'rgba(30, 58, 95, 0.08)'
                             },
                             accent: {
-                                DEFAULT: '#2563EB',     // Azul brillante
+                                DEFAULT: '#2563EB',
                                 soft: '#EFF6FF'
                             },
                             semantic: {
@@ -45,7 +69,7 @@
                                 muted: '#94A3B8',
                                 inverse: '#FFFFFF'
                             },
-                            // Modo Oscuro (Overrides para usar con clases .dark:* )
+                            // Modo Oscuro
                             dark: {
                                 bg: '#0D1117',
                                 surface: {
@@ -109,12 +133,59 @@
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
-        
+
+        /* Menu animations */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+        .backdrop {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .backdrop.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
     </style>
 </head>
 <body class="bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] font-display transition-colors duration-500">
+    
+    <!-- Mobile Menu Backdrop -->
+    <div id="menu-backdrop" class="fixed inset-0 bg-cp-text/50 dark:bg-black/50 backdrop-blur-sm z-40 backdrop hidden"></div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-64 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] shadow-2xl z-50 p-6 flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center mb-8 border-b border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] pb-4">
+                <span class="font-bold text-lg text-cp-brand dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Navegación</span>
+                <button id="close-menu" class="w-10 h-10 rounded-full flex items-center justify-center bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] text-cp-text-secondary hover:text-cp-accent transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            
+            <nav class="flex flex-col gap-6">
+                <a class="font-semibold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:text-cp-accent" href="#problemas">El Problema</a>
+                <a class="font-semibold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:text-cp-accent" href="#caracteristicas">Solución</a>
+                <a class="font-semibold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:text-cp-accent" href="#proceso">Flujo de trabajo</a>
+                <a class="font-semibold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:text-cp-accent" href="#capturas">Plataforma</a>
+            </nav>
+        </div>
+        
+        <div class="mt-auto pt-8 border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] flex flex-col gap-4">
+            <button class="w-full text-center text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar sesión</button>
+            <button class="w-full bg-cp-brand hover:bg-cp-brand-hover text-cp-text-inverse px-6 py-3 rounded-lg text-sm font-bold shadow-lg shadow-cp-brand/20 transition-all">
+                Solicitar demostración
+            </button>
+        </div>
+    </div>
+
     <!-- Header / Navigation -->
-    <header class="sticky top-0 z-50 w-full border-b border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] bg-cp-surface/80 dark:bg-[theme(colors.cp.dark.surface.1)]/80 backdrop-blur-md transition-all duration-300">
+    <header class="sticky top-0 z-40 w-full border-b border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] bg-cp-surface/80 dark:bg-[theme(colors.cp.dark.surface.1)]/80 backdrop-blur-md transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-2 group cursor-pointer">
                 <div class="w-10 h-10 bg-cp-brand rounded-lg flex items-center justify-center text-cp-text-inverse transform group-hover:rotate-12 transition-transform shadow-lg shadow-cp-brand/30">
@@ -122,17 +193,31 @@
                 </div>
                 <h1 class="text-2xl font-black tracking-tight text-cp-brand dark:text-cp-brand-muted">ConvivePro</h1>
             </div>
+            
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8">
                 <a class="text-sm font-semibold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-accent dark:hover:text-cp-accent relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cp-accent after:transition-all after:duration-300 hover:after:w-full" href="#problemas">Problemas</a>
                 <a class="text-sm font-semibold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-accent dark:hover:text-cp-accent relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cp-accent after:transition-all after:duration-300 hover:after:w-full" href="#caracteristicas">Funcionalidades</a>
                 <a class="text-sm font-semibold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-accent dark:hover:text-cp-accent relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cp-accent after:transition-all after:duration-300 hover:after:w-full" href="#proceso">Cómo funciona</a>
                 <a class="text-sm font-semibold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-accent dark:hover:text-cp-accent relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-cp-accent after:transition-all after:duration-300 hover:after:w-full" href="#capturas">Plataforma</a>
             </nav>
+            
             <div class="flex items-center gap-4">
-                <button class="hidden sm:block text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar sesión</button>
-                <button class="bg-cp-brand hover:bg-cp-brand-hover text-cp-text-inverse px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-cp-brand/20 hover:shadow-cp-brand/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 relative overflow-hidden group">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" type="button" class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
+                    <span id="theme-toggle-dark-icon" class="material-symbols-outlined hidden">light_mode</span>
+                    <span id="theme-toggle-light-icon" class="material-symbols-outlined hidden">dark_mode</span>
+                </button>
+            
+                <button class="hidden lg:block text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar sesión</button>
+                <button class="hidden lg:block bg-cp-brand hover:bg-cp-brand-hover text-cp-text-inverse px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-cp-brand/20 hover:shadow-cp-brand/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 relative overflow-hidden group">
                     <span class="relative z-10">Solicitar demostración</span>
                     <div class="absolute inset-0 h-full w-full bg-white/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-out z-0"></div>
+                </button>
+                
+                <!-- Hamburguer Button Mobile -->
+                <button id="hamburger-menu" class="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] text-cp-text-secondary hover:text-cp-accent transition-colors">
+                    <span class="material-symbols-outlined">menu_open</span>
                 </button>
             </div>
         </div>
@@ -410,34 +495,196 @@
         </div>
     </section>
 
-    <!-- Benefits -->
-    <section class="py-24 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-black mb-16 reveal">Beneficios Institucionales</h2>
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="flex items-center gap-5 bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] p-6 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] hover:border-cp-brand/40 dark:hover:border-cp-brand/40 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 reveal">
-                    <div class="w-12 h-12 rounded-full bg-[theme(colors.cp.semantic.success.bg)] dark:bg-[rgba(5,150,105,0.12)] text-[theme(colors.cp.semantic.success.text)] dark:text-[theme(colors.cp.semantic.success.DEFAULT)] flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined font-bold text-2xl">check_circle</span>
+    <!-- Social Proof (Testimonios) -->
+    <section class="py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative overflow-hidden" id="testimonios">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Testimonios</span>
+                <h2 class="text-3xl md:text-5xl font-black mb-6">Colegios que ya transformaron su convivencia</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] p-8 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg hover:-translate-y-2 transition-transform duration-300 reveal">
+                    <div class="flex text-cp-semantic-warning gap-1 mb-6">
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
                     </div>
-                    <span class="font-semibold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Organización total de la documentación oficial.</span>
+                    <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] italic mb-8 leading-relaxed">
+                        "Antes perdíamos horas buscando el historial de un alumno en carpetas físicas. Con ConvivePro, en dos clics tenemos el expediente completo frente a los apoderados. Nos dio total respaldo legal."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cp-brand-soft flex items-center justify-center text-cp-brand font-bold text-xl">
+                            MV
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">María Valenzuela</h4>
+                            <p class="text-xs text-cp-text-muted dark:text-[theme(colors.cp.dark.text.muted)]">Directora, Colegio San Ignacio</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-5 bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] p-6 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] hover:border-cp-brand/40 dark:hover:border-cp-brand/40 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 reveal reveal-delay-1">
-                    <div class="w-12 h-12 rounded-full bg-[theme(colors.cp.semantic.success.bg)] dark:bg-[rgba(5,150,105,0.12)] text-[theme(colors.cp.semantic.success.text)] dark:text-[theme(colors.cp.semantic.success.DEFAULT)] flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined font-bold text-2xl">check_circle</span>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] p-8 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg hover:-translate-y-2 transition-transform duration-300 reveal reveal-delay-1">
+                    <div class="flex text-cp-semantic-warning gap-1 mb-6">
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
                     </div>
-                    <span class="font-semibold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Seguimiento en tiempo real de cada medida aplicada.</span>
+                    <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] italic mb-8 leading-relaxed">
+                        "La función de adjuntar evidencias (audios y fotos) directamente desde el celular en el patio del colegio ha revolucionado cómo nuestra dupla psicosocial documenta las riñas."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cp-brand-soft flex items-center justify-center text-cp-brand font-bold text-xl">
+                            CR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Carlos Ruiz</h4>
+                            <p class="text-xs text-cp-text-muted dark:text-[theme(colors.cp.dark.text.muted)]">Inspector General, Liceo Bicentenario</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-5 bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] p-6 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] hover:border-cp-brand/40 dark:hover:border-cp-brand/40 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 reveal">
-                     <div class="w-12 h-12 rounded-full bg-[theme(colors.cp.semantic.success.bg)] dark:bg-[rgba(5,150,105,0.12)] text-[theme(colors.cp.semantic.success.text)] dark:text-[theme(colors.cp.semantic.success.DEFAULT)] flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined font-bold text-2xl">check_circle</span>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] p-8 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg hover:-translate-y-2 transition-transform duration-300 reveal reveal-delay-2">
+                    <div class="flex text-cp-semantic-warning gap-1 mb-6">
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
                     </div>
-                    <span class="font-semibold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Transparencia en el proceso ante apoderados.</span>
+                    <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] italic mb-8 leading-relaxed">
+                        "Las métricas del Dashboard nos permitieron identificar que el 70% de los incidentes ocurrían los jueves en un sector específico. Tomamos medidas preventivas y los casos bajaron a la mitad."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-cp-brand-soft flex items-center justify-center text-cp-brand font-bold text-xl">
+                            AP
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Andrea Pérez</h4>
+                            <p class="text-xs text-cp-text-muted dark:text-[theme(colors.cp.dark.text.muted)]">Encargada de Convivencia, Red Educativa</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center gap-5 bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] p-6 rounded-2xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] hover:border-cp-brand/40 dark:hover:border-cp-brand/40 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 reveal reveal-delay-1">
-                     <div class="w-12 h-12 rounded-full bg-[theme(colors.cp.semantic.success.bg)] dark:bg-[rgba(5,150,105,0.12)] text-[theme(colors.cp.semantic.success.text)] dark:text-[theme(colors.cp.semantic.success.DEFAULT)] flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined font-bold text-2xl">check_circle</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-24 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] relative" id="precios">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-cp-brand font-bold tracking-wider uppercase text-sm mb-4 block dark:text-cp-brand-muted">Planes Adaptables</span>
+                <h2 class="text-3xl md:text-5xl font-black mb-6">Precios transparentes para todos</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Soluciones escalables basadas en la matrícula de tu institución.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+                <!-- Plan Basico -->
+                <div class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] rounded-3xl p-8 border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-sm hover:shadow-xl transition-all duration-300 reveal">
+                    <h3 class="text-xl font-bold mb-2">Básico</h3>
+                    <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm mb-6">Para escuelas pequeñas</p>
+                    <div class="mb-6 flex items-baseline gap-1">
+                        <span class="text-4xl font-black">Cotizar</span>
                     </div>
-                    <span class="font-semibold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Reducción del 60% en carga administrativa.</span>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]"><span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> Hasta 500 alumnos</li>
+                        <li class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]"><span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> Registro de incidentes</li>
+                        <li class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]"><span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> 3 Accesos administrativos</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors">Solicitar cotización</button>
+                </div>
+                
+                <!-- Plan Pro (Destacado) -->
+                <div class="bg-cp-brand dark:bg-cp-brand-hover text-cp-text-inverse rounded-3xl p-10 shadow-2xl transform md:-translate-y-4 relative reveal reveal-delay-1 border border-cp-brand-hover">
+                    <div class="absolute top-0 right-6 transform -translate-y-1/2">
+                        <span class="bg-cp-accent text-cp-text-inverse text-xs font-black uppercase tracking-wider py-1 px-3 rounded-full shadow-lg">Más Popular</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Pro</h3>
+                    <p class="text-cp-brand-muted text-sm mb-6">La solución completa de convivencia</p>
+                    <div class="mb-6 flex items-baseline gap-1">
+                        <span class="text-5xl font-black">UF 3</span>
+                        <span class="text-cp-brand-muted">/mes</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-cp-brand-muted text-sm">check</span> Hasta 1500 alumnos</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-cp-brand-muted text-sm">check</span> Evidencias multimedia ilimitadas</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-cp-brand-muted text-sm">check</span> Dashboard Analytics</li>
+                        <li class="flex items-center gap-3 text-sm"><span class="material-symbols-outlined text-cp-brand-muted text-sm">check</span> 10 Accesos administrativos</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl bg-cp-accent hover:bg-cp-surface hover:text-cp-brand text-cp-text-inverse font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">Empezar ahora</button>
+                </div>
+                
+                <!-- Plan Corp -->
+                <div class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] rounded-3xl p-8 border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-sm hover:shadow-xl transition-all duration-300 reveal reveal-delay-2">
+                    <h3 class="text-xl font-bold mb-2">Redes</h3>
+                    <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm mb-6">Para múltiples colegios</p>
+                    <div class="mb-6 flex items-baseline gap-1">
+                        <span class="text-4xl font-black">Personalizado</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]"><span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> Matrícula ilimitada</li>
+                        <li class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]"><span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> Multisede / Corporaciones</li>
+                        <li class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]"><span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> Integración SIGE / API</li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors">Hablar con ventas</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative" id="faq">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-black mb-4">Preguntas Frecuentes</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Resolvemos tus dudas sobre seguridad, implementación y uso.</p>
+            </div>
+            
+            <div class="space-y-4 reveal reveal-delay-1">
+                <!-- FAQ Item 1 -->
+                <div class="faq-accordion bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center bg-transparent hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors focus:outline-none">
+                        <span class="font-bold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">¿Es seguro almacenar datos de menores de edad?</span>
+                        <span class="material-symbols-outlined text-cp-brand transition-transform duration-300 faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.2)]">
+                        <div class="p-6 text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]">
+                            Totalmente. ConvivePro opera bajo infraestructuras de nube certificadas (AWS/Google Cloud) cumpliendo con estrictas normativas de privacidad y encriptación de extremo a extremo. Los datos no son accesibles para terceros.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-accordion bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center bg-transparent hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors focus:outline-none">
+                        <span class="font-bold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">¿Cuánto tiempo demora capacitar a nuestro equipo?</span>
+                        <span class="material-symbols-outlined text-cp-brand transition-transform duration-300 faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.2)]">
+                        <div class="p-6 text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]">
+                            El sistema está diseñado para ser tan fácil de usar como una red social. Típicamente, el equipo requiere sólo una sesión de onboarding remota de 45 minutos. Los inspectores lo dominan en su primer día de uso sin requerir manuales extensos.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-accordion bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center bg-transparent hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors focus:outline-none">
+                        <span class="font-bold text-lg text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">¿Sirve para cumplir con las exigencias del Ministerio de Educación?</span>
+                        <span class="material-symbols-outlined text-cp-brand transition-transform duration-300 faq-icon">expand_more</span>
+                    </button>
+                    <div class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.2)]">
+                        <div class="p-6 text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]">
+                            Sí. La estructura de ConvivePro fue co-creada con inspectores generales para generar expedientes que cumplan al 100% con los requerimientos formales en caso de auditorías de organismos reguladores escolares.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -516,29 +763,90 @@
         </div>
     </footer>
 
-    <!-- Interactive Scroll Animations Script -->
+    <!-- Interactive Custom Scripts -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Intersection Observer configuration
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
+            // 1. Intersection Observer for scroll animations
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
-                        // Optional: stop observing once animated
-                        // observer.unobserve(entry.target); 
                     }
                 });
-            }, options);
+            }, { root: null, rootMargin: '0px', threshold: 0.15 });
 
-            // Select all elements to reveal
-            const revealElements = document.querySelectorAll('.reveal');
-            revealElements.forEach(el => observer.observe(el));
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+
+            // 2. FAQ Accordion Logic
+            const faqButtons = document.querySelectorAll('.faq-btn');
+            faqButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    // Toggle current
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.style.transform = "rotate(0deg)";
+                    } else {
+                        // Close all others
+                        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
+                        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = "rotate(0deg)");
+                        // Open current
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.style.transform = "rotate(180deg)";
+                    }
+                });
+            });
+
+
+            // 3. Dark Mode Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const darkIcon = document.getElementById('theme-toggle-dark-icon');
+            const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+            // Set initial icon based on theme
+            if (document.documentElement.classList.contains('dark')) {
+                lightIcon.classList.remove('hidden');
+            } else {
+                darkIcon.classList.remove('hidden');
+            }
+
+            themeToggleBtn.addEventListener('click', function() {
+                darkIcon.classList.toggle('hidden');
+                lightIcon.classList.toggle('hidden');
+
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            });
+
+
+            // 4. Mobile Menu Drawer Logic
+            const mobileMenuBtn = document.getElementById('hamburger-menu');
+            const closeMenuBtn = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBackdrop = document.getElementById('menu-backdrop');
+            
+            function toggleMenu() {
+                mobileMenu.classList.toggle('open');
+                menuBackdrop.classList.toggle('hidden');
+                // Trigger reflow to apply opacity transition
+                void menuBackdrop.offsetWidth;
+                menuBackdrop.classList.toggle('open');
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            closeMenuBtn.addEventListener('click', toggleMenu);
+            menuBackdrop.addEventListener('click', toggleMenu);
+            // Close menu when a link inside is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
         });
     </script>
 </body>
