@@ -293,12 +293,11 @@
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-cp-brand to-cp-accent inline-block overflow-visible py-2">
                         convivencia escolar
-                    </span>
+                    </span><br class="hidden lg:block" /> en tu colegio
                 </h2>
                 <p
                     class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mb-10 leading-relaxed max-w-xl reveal reveal-delay-1">
-                    ConvivePro permite registrar incidentes, gestionar evidencias y analizar casos de convivencia
-                    escolar de forma clara, ordenada y profesional.
+                    Reemplaza el papel y centraliza el registro de incidentes, evidencias y seguimiento de casos para tomar decisiones disciplinarias informadas.
                 </p>
                 <div class="flex flex-wrap gap-4 reveal reveal-delay-2">
                     <a href="#contacto"
@@ -306,10 +305,10 @@
                         Solicitar demostración <span
                             class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
                     </a>
-                    <button
-                        class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] border-2 border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] px-8 py-4 rounded-xl text-lg font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 active:scale-95">
+                    <a href="#proceso"
+                        class="inline-flex items-center justify-center bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] border-2 border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] px-8 py-4 rounded-xl text-lg font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 active:scale-95">
                         Ver cómo funciona
-                    </button>
+                    </a>
                 </div>
             </div>
 
@@ -336,14 +335,25 @@
                         <div class="w-3 h-3 rounded-full bg-[theme(colors.cp.semantic.success.DEFAULT)] shadow-sm">
                         </div>
                     </div>
-                    <!-- Dashboard Mockup Image -->
+                    <!-- Dashboard Mockup Image with Human Touch -->
                     <div
-                        class="bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex-1 p-4 overflow-hidden group flex items-center justify-center">
-                        <div class="w-full h-full rounded-lg bg-contain bg-no-repeat bg-center border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-inner transform group-hover:scale-105 transition-transform duration-1000"
-                            data-alt="Modern SaaS dashboard with bar charts and activity feed"
-                            style="background-image: url('img/img1.png');">
+                        class="bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex-1 p-4 overflow-hidden group flex items-center justify-center relative">
+                        <div class="w-full h-full rounded-lg bg-cover bg-no-repeat bg-center border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-inner transform group-hover:scale-105 transition-transform duration-1000"
+                            data-alt="Teacher and students in a healthy school environment"
+                            style="background-image: url('img/hero_school.png');">
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/5 to-transparent">
+                                class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/20 to-transparent">
+                            </div>
+                        </div>
+                        
+                        <!-- Floating SaaS UI Element -->
+                        <div class="absolute -bottom-2 -left-2 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] rounded-xl p-3 shadow-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] flex items-center gap-3 transform group-hover:-translate-y-2 transition-transform duration-500">
+                            <div class="bg-[theme(colors.cp.semantic.success.DEFAULT)]/20 text-[theme(colors.cp.semantic.success.DEFAULT)] p-1.5 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-sm">check_circle</span>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">Caso #204 Resuelto</p>
+                                <p class="text-[10px] text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Hace 2 minutos</p>
                             </div>
                         </div>
                     </div>
@@ -360,9 +370,8 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
                 <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">El Problema</span>
-                <h2 class="text-3xl md:text-5xl font-black mb-6">La convivencia escolar aún se gestiona con papel</h2>
-                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">La falta de
-                    digitalización genera brechas críticas en la administración de la convivencia escolar.</p>
+                <h2 class="text-3xl md:text-5xl font-black mb-6">El costo del desorden y el uso de papel</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Gestionar la convivencia escolar con métodos tradicionales genera desgaste innecesario y dificulta la toma de decisiones.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -374,10 +383,10 @@
                         <span
                             class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">folder_off</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Información dispersa</h3>
+                    <h3 class="text-xl font-bold mb-3">Uso de papel</h3>
                     <p
                         class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed">
-                        Documentos en carpetas físicas y archivos aislados difíciles de localizar en momentos críticos.
+                        Libros de clases y formularios físicos que generan desorden, pérdida de información y daño de documentos importantes.
                     </p>
                 </div>
 
@@ -388,11 +397,10 @@
                         <span
                             class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">history</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Dificultad de historial</h3>
+                    <h3 class="text-xl font-bold mb-3">Información dispersa</h3>
                     <p
                         class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed">
-                        Es casi imposible reconstruir la línea de tiempo disciplinaria de un alumno sin horas de
-                        búsqueda.</p>
+                        Anotaciones fragmentadas en múltiples lugares que impiden tener un panorama centralizado del comportamiento del alumno.</p>
                 </div>
 
                 <div
@@ -402,10 +410,10 @@
                         <span
                             class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">search_off</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Falta de trazabilidad</h3>
+                    <h3 class="text-xl font-bold mb-3">Dificultad para seguimiento</h3>
                     <p
                         class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed">
-                        Incertidumbre total sobre qué acciones se tomaron, cuándo y quién fue el responsable del caso.
+                        No hay forma clara de dar seguimiento a los casos abiertos, compromisos adquiridos ni medidas disciplinarias.
                     </p>
                 </div>
 
@@ -416,11 +424,10 @@
                         <span
                             class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">monitoring</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Ausencia de datos</h3>
+                    <h3 class="text-xl font-bold mb-3">Falta de estadísticas</h3>
                     <p
                         class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed">
-                        Imposibilidad de detectar patrones o tendencias de convivencia para la toma de decisiones
-                        preventiva.</p>
+                        Sin reportes ni dashboards en tiempo real es imposible entender el clima escolar para tomar decisiones objetivas.</p>
                 </div>
             </div>
         </div>
@@ -432,18 +439,28 @@
         <div
             class="absolute -right-40 top-40 w-96 h-96 bg-[rgba(30,58,95,0.08)] blur-[120px] rounded-full dark:bg-cp-brand/20">
         </div>
+        
+        <!-- Lifestyle Banner Transition -->
+        <div class="max-w-7xl mx-auto px-6 relative z-10 mb-20 reveal">
+            <div class="w-full h-64 md:h-96 rounded-3xl bg-cover bg-center shadow-2xl relative overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]" style="background-image: url('img/students.png');">
+                <div class="absolute inset-0 bg-gradient-to-t from-cp-brand/80 via-cp-brand/20 to-transparent flex items-end p-8 md:p-12">
+                    <h3 class="text-2xl md:text-4xl font-black text-white max-w-2xl leading-tight">
+                        Porque el verdadero objetivo es que ellos estudien en un entorno seguro y feliz.
+                    </h3>
+                </div>
+            </div>
+        </div>
+
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16 mb-24">
                 <div class="lg:w-1/2 reveal">
                     <span
                         class="text-cp-brand font-bold tracking-wider uppercase text-sm mb-4 block dark:text-cp-brand-muted">La
                         Solución</span>
-                    <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-8">Una plataforma diseñada para
-                        convivencia escolar</h2>
+                    <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-8">La solución centralizada para un colegio organizado</h2>
                     <p
                         class="text-lg text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mb-8 leading-relaxed">
-                        Centralice la información y tome decisiones organizadas con un flujo de trabajo profesional
-                        diseñado específicamente para directivos y equipos de convivencia.
+                        Convive+ centraliza tus registros, otorga orden administrativo, asegura el control total de los expedientes y garantiza la trazabilidad de cada acción disciplinaria tomada por el equipo.
                     </p>
                     <div class="space-y-6">
                         <div
@@ -453,10 +470,10 @@
                                 <span class="material-symbols-outlined text-xl">check</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">Cumplimiento Normativo</h4>
+                                <h4 class="font-bold text-lg mb-1">Total Trazabilidad</h4>
                                 <p
                                     class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm">
-                                    Cumplimiento total con normativas educacionales locales exigidas.</p>
+                                    Seguimiento claro y documentado de cada fase de los casos escolares.</p>
                             </div>
                         </div>
                         <div
@@ -466,10 +483,10 @@
                                 <span class="material-symbols-outlined text-xl">account_balance</span>
                             </div>
                             <div>
-                                <h4 class="font-bold text-lg mb-1">Punto Único de Verdad</h4>
+                                <h4 class="font-bold text-lg mb-1">Orden y Control</h4>
                                 <p
                                     class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm">
-                                    Centralización completa de expedientes digitales e historial de estudiantes.</p>
+                                    Información consolidada sin uso de papel y con rápido acceso para directivos.</p>
                             </div>
                         </div>
                     </div>
@@ -558,8 +575,8 @@
                         class="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cp-surface group-hover:text-cp-brand transition-all duration-300 border border-white/20 shadow-xl group-hover:shadow-white/20">
                         <span class="material-symbols-outlined text-4xl">add_box</span>
                     </div>
-                    <h4 class="font-bold mb-2 text-xl">Registrar</h4>
-                    <p class="text-sm text-white/80">Inicio rápido del caso digital.</p>
+                    <h4 class="font-bold mb-2 text-xl">Registrar incidente</h4>
+                    <p class="text-sm text-white/80">Crea el incidente en el sistema.</p>
                 </div>
 
                 <div class="flex flex-col items-center text-center group relative z-10 reveal reveal-delay-1">
@@ -567,8 +584,8 @@
                         class="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cp-surface group-hover:text-cp-brand transition-all duration-300 border border-white/20 shadow-xl group-hover:shadow-white/20">
                         <span class="material-symbols-outlined text-4xl">psychology</span>
                     </div>
-                    <h4 class="font-bold mb-2 text-xl">Analizar</h4>
-                    <p class="text-sm text-white/80">Evaluación profesional del contexto.</p>
+                    <h4 class="font-bold mb-2 text-xl">Analizar caso</h4>
+                    <p class="text-sm text-white/80">Revisa el caso y sus antecedentes.</p>
                 </div>
 
                 <div class="flex flex-col items-center text-center group relative z-10 reveal reveal-delay-2">
@@ -576,8 +593,8 @@
                         class="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cp-surface group-hover:text-cp-brand transition-all duration-300 border border-white/20 shadow-xl group-hover:shadow-white/20">
                         <span class="material-symbols-outlined text-4xl">cloud_upload</span>
                     </div>
-                    <h4 class="font-bold mb-2 text-xl">Evidenciar</h4>
-                    <p class="text-sm text-white/80">Carga de respaldo multimedia.</p>
+                    <h4 class="font-bold mb-2 text-xl">Adjuntar evidencias</h4>
+                    <p class="text-sm text-white/80">Añade evidencias relevantes al caso.</p>
                 </div>
 
                 <div class="flex flex-col items-center text-center group relative z-10 reveal reveal-delay-3">
@@ -585,8 +602,8 @@
                         class="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cp-surface group-hover:text-cp-brand transition-all duration-300 border border-white/20 shadow-xl group-hover:shadow-white/20">
                         <span class="material-symbols-outlined text-4xl">gavel</span>
                     </div>
-                    <h4 class="font-bold mb-2 text-xl">Actuar</h4>
-                    <p class="text-sm text-white/80">Aplicación de medidas y compromisos.</p>
+                    <h4 class="font-bold mb-2 text-xl">Aplicar medidas</h4>
+                    <p class="text-sm text-white/80">Dicta medidas disciplinarias.</p>
                 </div>
 
                 <div class="flex flex-col items-center text-center group relative z-10 reveal reveal-delay-3">
@@ -594,8 +611,8 @@
                         class="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-cp-surface group-hover:text-cp-accent transition-all duration-300 border border-white/20 shadow-xl group-hover:shadow-white/20 animate-pulse-glow group-hover:animate-none">
                         <span class="material-symbols-outlined text-4xl">insights</span>
                     </div>
-                    <h4 class="font-bold mb-2 text-xl">Medir</h4>
-                    <p class="text-sm text-white/80">Generación de informes automáticos.</p>
+                    <h4 class="font-bold mb-2 text-xl">Generar reportes</h4>
+                    <p class="text-sm text-white/80">Obtén reportes y estadísticas.</p>
                 </div>
             </div>
         </div>
@@ -605,10 +622,9 @@
     <section class="py-32 bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.1)]" id="capturas">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20 reveal">
-                <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">La Interfaz</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">Experiencia de usuario fluida</h2>
-                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Diseñado para
-                    ser intuitivo y eliminar la fricción administrativa.</p>
+                <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Tus Beneficios</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">¿Por qué elegir Convive+?</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Convive+ transforma la gestión diaria de tu establecimiento en resultados medibles.</p>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-10">
@@ -622,11 +638,10 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                             <span
-                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Registro
-                                rápido e intuitivo</span>
+                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Ahorro de tiempo</span>
                         </div>
                     </div>
-                    <h4 class="font-bold text-xl text-center">Registro de Incidentes</h4>
+                    <h4 class="font-bold text-xl text-center">Mayor organización operativa</h4>
                 </div>
 
                 <div class="flex flex-col gap-6 group reveal reveal-delay-1">
@@ -634,16 +649,16 @@
                         class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
                         <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
                             data-alt="Screenshot of main statistics dashboard"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjrkCFYLV7Jc-UIczba6hWqBxe9ZzBcVUOHgJYnGpq-r9gkGZMp6_mVCxaJWp_t6D4u2eB3AQMjj-V7SLgOWlKAvsw9YYr6QopiqtQLEyLMkaQK3ZByeiliDuZfZFVlP4jHqC7l4OEhS4vh47vg-SQSD4Zjk7b0AJLeczg7JFtmtJO0tNospXnq5UjyUg1_QuJlgVQOupV_q-f3bFEFnv69BbptR8vuIyeSjWzjuQACp5VZgyKK-P8gGc-AwVM6MmQirjwOADr_Qc');">
+                            style="background-image: url('img/img1.png');">
                         </div>
+
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                             <span
-                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Métricas
-                                en tiempo real</span>
+                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Información clara</span>
                         </div>
                     </div>
-                    <h4 class="font-bold text-xl text-center">Dashboard General</h4>
+                    <h4 class="font-bold text-xl text-center">Decisiones informadas y transparencia</h4>
                 </div>
 
                 <div class="flex flex-col gap-6 group reveal reveal-delay-2">
@@ -656,11 +671,10 @@
                         <div
                             class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                             <span
-                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Trazabilidad
-                                completa</span>
+                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Tracking total</span>
                         </div>
                     </div>
-                    <h4 class="font-bold text-xl text-center">Perfil del Estudiante</h4>
+                    <h4 class="font-bold text-xl text-center">Seguimiento claro de casos</h4>
                 </div>
             </div>
         </div>
@@ -672,6 +686,17 @@
             <div class="text-center mb-16 reveal">
                 <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Testimonios</span>
                 <h2 class="text-3xl md:text-5xl font-black mb-6">Colegios que ya transformaron su convivencia</h2>
+            </div>
+            
+            <!-- Logos Placeholders -->
+            <div class="mb-20 text-center relative z-10 w-full overflow-hidden">
+                <p class="text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] uppercase tracking-wider mb-8">Más de 50 colegios confían en Convive+</p>
+                <div class="flex flex-wrap justify-center items-center gap-10 opacity-70 grayscale">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-4xl">school</span><span class="font-bold text-xl">Liceo Nacional</span></div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-4xl">menu_book</span><span class="font-bold text-xl">Colegio San José</span></div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-4xl">history_edu</span><span class="font-bold text-xl">Instituto Bicentenario</span></div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-4xl">local_library</span><span class="font-bold text-xl">Colegio Altamira</span></div>
+                </div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
@@ -790,9 +815,8 @@
                 <span
                     class="text-cp-brand font-bold tracking-wider uppercase text-sm mb-4 block dark:text-cp-brand-muted">Planes
                     Adaptables</span>
-                <h2 class="text-3xl md:text-5xl font-black mb-6">Precios transparentes para todos</h2>
-                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Soluciones
-                    escalables basadas en la matrícula de tu institución.</p>
+                <h2 class="text-3xl md:text-5xl font-black mb-6">Planes adaptados a tu colegio</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Ahorra un 20% eligiendo la facturación anual. Selecciona el mejor plan para tu establecimiento.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
@@ -803,25 +827,27 @@
                     <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm mb-6">Para
                         escuelas pequeñas</p>
                     <div class="mb-6 flex items-baseline gap-1">
-                        <span class="text-4xl font-black">Cotizar</span>
+                        <span class="text-4xl font-black">$39.990</span><span class="text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">/mes</span>
                     </div>
                     <ul class="space-y-4 mb-8">
                         <li
                             class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">
                             <span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> Hasta
-                            500 alumnos</li>
+                            500 alumnos
+                        </li>
                         <li
                             class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">
                             <span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span>
-                            Registro de incidentes</li>
+                            Registro de incidentes
+                        </li>
                         <li
                             class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">
                             <span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span> 3
-                            Accesos administrativos</li>
+                            Accesos administrativos
+                        </li>
                     </ul>
                     <button
-                        class="w-full py-3 rounded-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors">Solicitar
-                        cotización</button>
+                        class="w-full py-3 rounded-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors">Contratar Plan Básico</button>
                 </div>
 
                 <!-- Plan Pro (Destacado) -->
@@ -829,13 +855,13 @@
                     class="bg-cp-brand dark:bg-cp-brand-hover text-cp-text-inverse rounded-3xl p-10 shadow-2xl transform md:-translate-y-4 relative reveal reveal-delay-1 border border-cp-brand-hover">
                     <div class="absolute top-0 right-6 transform -translate-y-1/2">
                         <span
-                            class="bg-cp-accent text-cp-text-inverse text-xs font-black uppercase tracking-wider py-1 px-3 rounded-full shadow-lg">Más
-                            Popular</span>
+                            class="bg-cp-accent text-cp-text-inverse text-xs font-black uppercase tracking-wider py-1 px-3 rounded-full shadow-lg">Plan más
+                            utilizado</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Pro</h3>
                     <p class="text-cp-brand-muted text-sm mb-6">La solución completa de convivencia</p>
                     <div class="mb-6 flex items-baseline gap-1">
-                        <span class="text-5xl font-black">UF 3</span>
+                        <span class="text-5xl font-black">$69.990</span>
                         <span class="text-cp-brand-muted">/mes</span>
                     </div>
                     <ul class="space-y-4 mb-8">
@@ -853,36 +879,37 @@
                             administrativos</li>
                     </ul>
                     <button
-                        class="w-full py-3 rounded-xl bg-cp-accent hover:bg-cp-surface hover:text-cp-brand text-cp-text-inverse font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">Empezar
-                        ahora</button>
+                        class="w-full py-3 rounded-xl bg-cp-accent hover:bg-cp-surface hover:text-cp-brand text-cp-text-inverse font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">Contratar Plan Profesional</button>
                 </div>
 
                 <!-- Plan Corp -->
                 <div
                     class="bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.1)] rounded-3xl p-8 border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-sm hover:shadow-xl transition-all duration-300 reveal reveal-delay-2">
-                    <h3 class="text-xl font-bold mb-2">Redes</h3>
+                    <h3 class="text-xl font-bold mb-2">Premium</h3>
                     <p class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm mb-6">Para
-                        múltiples colegios</p>
+                        colegios de alta exigencia</p>
                     <div class="mb-6 flex items-baseline gap-1">
-                        <span class="text-4xl font-black">Personalizado</span>
+                        <span class="text-4xl font-black">$99.990</span><span class="text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">/mes</span>
                     </div>
                     <ul class="space-y-4 mb-8">
                         <li
                             class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">
                             <span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span>
-                            Matrícula ilimitada</li>
+                            Matrícula ilimitada
+                        </li>
                         <li
                             class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">
                             <span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span>
-                            Multisede / Corporaciones</li>
+                            Multisede / Corporaciones
+                        </li>
                         <li
                             class="flex items-center gap-3 text-sm text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">
                             <span class="material-symbols-outlined text-cp-semantic-success text-sm">check</span>
-                            Integración SIGE / API</li>
+                            Integración SIGE / API
+                        </li>
                     </ul>
                     <button
-                        class="w-full py-3 rounded-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors">Hablar
-                        con ventas</button>
+                        class="w-full py-3 rounded-xl border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] font-bold text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] transition-colors">Contratar Plan Premium</button>
                 </div>
             </div>
         </div>
@@ -990,7 +1017,7 @@
                             Hablemos
                         </span>
                         <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
-                            Transforma la gestión de convivencia hoy
+                            Transforma la gestión de convivencia escolar en tu establecimiento
                         </h2>
                         <p class="text-lg text-white/80 mb-10 leading-relaxed max-w-lg">
                             Agenda una demostración personalizada con nuestro equipo o escríbenos directamente por
@@ -1079,7 +1106,7 @@
                         <span class="material-symbols-outlined">analytics</span>
                     </div>
                     <h2 class="text-2xl font-black text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">
-                        ConvivePro</h2>
+                        Convive+</h2>
                 </div>
                 <p
                     class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] max-w-sm mb-8 leading-relaxed">
@@ -1120,18 +1147,21 @@
                     <li><a href="#" class="flex items-center gap-3 hover:text-cp-accent transition-colors group">
                             <div
                                 class="w-8 h-8 rounded-full bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex justify-center items-center group-hover:bg-[rgba(30,58,95,0.08)] group-hover:text-cp-brand transition-colors">
-                                <span class="material-symbols-outlined text-sm">mail</span></div>
+                                <span class="material-symbols-outlined text-sm">mail</span>
+                            </div>
                             contacto@convivepro.com
                         </a></li>
                     <li><a href="#" class="flex items-center gap-3 hover:text-cp-accent transition-colors group">
                             <div
                                 class="w-8 h-8 rounded-full bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex justify-center items-center group-hover:bg-[rgba(30,58,95,0.08)] group-hover:text-cp-brand transition-colors">
-                                <span class="material-symbols-outlined text-sm">call</span></div> +56 9 1234 5678
+                                <span class="material-symbols-outlined text-sm">call</span>
+                            </div> +56 9 1234 5678
                         </a></li>
                     <li><span class="flex items-center gap-3">
                             <div
                                 class="w-8 h-8 rounded-full bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex justify-center items-center">
-                                <span class="material-symbols-outlined text-sm">location_on</span></div> Santiago, Chile
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                            </div> Santiago, Chile
                         </span></li>
                 </ul>
             </div>
