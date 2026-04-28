@@ -6,14 +6,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- SEO Técnico & Meta Tags -->
-    <title>Convive+ | Software de Gestión de Convivencia Escolar</title>
+    <title>Convivia+ | Software de Gestión de Convivencia Escolar</title>
     <meta name="description"
         content="La plataforma profesional para registrar incidentes, gestionar evidencias y analizar casos de convivencia escolar. Diseñada para directivos y equipos psicosociales.">
 
     <!-- Open Graph / Redes Sociales -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://convivepro.com/">
-    <meta property="og:title" content="Convive+ | Digitaliza la convivencia escolar">
+    <meta property="og:title" content="Convivia+ | Digitaliza la convivencia escolar">
     <meta property="og:description"
         content="Centraliza expedientes, evidencia y normativas en un ecosistema digital amigable.">
     <meta property="og:image"
@@ -178,11 +178,20 @@
             pointer-events: auto;
         }
 
+        @keyframes flow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .animate-flow {
+            animation: flow 2s linear infinite;
+        }
+
         /* Respect user's motion preferences (WCAG 2.1 AA) */
         @media (prefers-reduced-motion: reduce) {
 
             .animate-float,
             .animate-blob,
+            .animate-flow,
             .animate-pulse-glow {
                 animation: none !important;
             }
@@ -232,7 +241,7 @@
         <div
             class="mt-auto pt-8 border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] flex flex-col gap-4">
             <button
-                class="w-full text-center text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar
+                class="hidden w-full text-center text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar
                 sesión</button>
             <a href="#contacto"
                 class="w-full text-center block bg-cp-brand hover:bg-cp-brand-hover text-cp-text-inverse px-6 py-3 rounded-lg text-sm font-bold shadow-lg shadow-cp-brand/20 transition-all">
@@ -242,16 +251,13 @@
     </div>
 
     <!-- Header / Navigation -->
-    <header
-        class="sticky top-0 z-40 w-full border-b border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] bg-cp-surface/80 dark:bg-[theme(colors.cp.dark.surface.1)]/80 backdrop-blur-md transition-all duration-300">
+    <header id="main-header"
+        class="sticky top-0 z-40 w-full transition-all duration-500 bg-transparent border-transparent py-2">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center group cursor-pointer">
-                <!-- Mobile: ícono compacto -->
-                <img src="img/logo/favicon.svg" alt="ConvivePro"
-                    class="w-16 h-16 md:hidden transition-opacity duration-300 group-hover:opacity-80">
-                <!-- Desktop: logo horizontal completo -->
+                <!-- Logo completo en todas las resoluciones -->
                 <img src="img/logo/logoweb2.svg" alt="ConvivePro Logo"
-                    class="hidden md:block w-80 lg:w-[200px] h-auto transition-opacity duration-300 group-hover:opacity-80">
+                    class="w-56 md:w-80 lg:w-[200px] h-auto transition-opacity duration-300 group-hover:opacity-80">
             </a>
 
             <!-- Desktop Nav -->
@@ -275,7 +281,7 @@
                 </button>
 
                 <button
-                    class="hidden lg:block text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar
+                    class="hidden text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar
                     sesión</button>
                 <a href="#contacto"
                     class="hidden lg:block bg-cp-brand hover:bg-cp-brand-hover text-cp-text-inverse px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-cp-brand/20 hover:shadow-cp-brand/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 relative overflow-hidden group">
@@ -317,11 +323,14 @@
                     tomar decisiones disciplinarias informadas.
                 </p>
                 <div class="flex flex-wrap gap-4 reveal reveal-delay-2">
-                    <a href="#contacto"
-                        class="inline-flex bg-cp-accent hover:bg-cp-brand text-cp-text-inverse hover:-translate-y-1 px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-cp-accent/30 hover:shadow-cp-brand/40 transition-all duration-300 items-center gap-2 group active:scale-95">
-                        Solicitar demostración <span
-                            class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                    </a>
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-cp-accent to-[#8B5CF6] rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+                        <a href="#contacto"
+                            class="relative inline-flex bg-cp-bg hover:bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] dark:hover:bg-[theme(colors.cp.dark.surface.1)] text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] border border-cp-border/50 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 items-center gap-2 active:scale-95">
+                            Solicitar demostración <span
+                                class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform text-cp-accent">arrow_forward</span>
+                        </a>
+                    </div>
                     <a href="#proceso"
                         class="inline-flex items-center gap-2 px-6 py-4 rounded-xl text-base font-semibold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-accent dark:hover:text-cp-accent transition-colors duration-300 active:scale-95">
                         <span class="material-symbols-outlined text-xl">play_circle</span>
@@ -387,6 +396,30 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Impact Counters -->
+    <section class="py-12 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] border-y border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] relative z-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-cp-border dark:divide-[theme(colors.cp.dark.border.DEFAULT)]">
+                <div class="text-center px-4 reveal">
+                    <p class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cp-accent to-cp-brand dark:to-cp-brand-muted mb-2"><span class="counter" data-target="100">0</span>%</p>
+                    <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">Trazabilidad</p>
+                </div>
+                <div class="text-center px-4 reveal reveal-delay-1">
+                    <p class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cp-brand to-[#8B5CF6] mb-2"><span class="counter" data-target="100">0</span></p>
+                    <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">% Papel Eliminado</p>
+                </div>
+                <div class="text-center px-4 reveal reveal-delay-2">
+                    <p class="text-4xl lg:text-5xl font-black text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] mb-2"><span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span></p>
+                    <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">Acceso a datos</p>
+                </div>
+                <div class="text-center px-4 reveal reveal-delay-3">
+                    <p class="text-4xl lg:text-5xl font-black text-[theme(colors.cp.semantic.success.DEFAULT)] mb-2">+<span class="counter" data-target="40">0</span>%</p>
+                    <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">Tiempo ahorrado</p>
                 </div>
             </div>
         </div>
@@ -499,7 +532,7 @@
                         colegio organizado</h2>
                     <p
                         class="text-lg text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mb-8 leading-relaxed">
-                        Convive+ centraliza tus registros, otorga orden administrativo, asegura el control total de los
+                        Convivia+ centraliza tus registros, otorga orden administrativo, asegura el control total de los
                         expedientes y garantiza la trazabilidad de cada acción disciplinaria tomada por el equipo.
                     </p>
                     <div class="space-y-6">
@@ -749,7 +782,9 @@
 
             <div class="relative grid grid-cols-1 md:grid-cols-5 gap-8">
                 <!-- Connective Line -->
-                <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-white/20 z-0"></div>
+                <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-white/10 z-0 overflow-hidden rounded-full">
+                    <div class="w-full h-full bg-gradient-to-r from-transparent via-cp-accent to-transparent animate-flow"></div>
+                </div>
 
                 <div class="flex flex-col items-center text-center group relative z-10 reveal">
                     <div
@@ -804,8 +839,8 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-20 reveal">
                 <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Tus Beneficios</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">¿Por qué elegir Convive+?</h2>
-                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Convive+
+                <h2 class="text-4xl md:text-5xl font-black mb-6">¿Por qué elegir Convivia+?</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Convivia+
                     transforma la gestión diaria de tu establecimiento en resultados medibles.</p>
             </div>
 
@@ -866,7 +901,7 @@
     </section>
 
     <!-- Social Proof (Testimonios) -->
-    <section class="py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative overflow-hidden" id="testimonios">
+    <section class="hidden py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative overflow-hidden" id="testimonios">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Testimonios</span>
@@ -877,7 +912,7 @@
             <div class="mb-20 text-center relative z-10 w-full overflow-hidden">
                 <p
                     class="text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] uppercase tracking-wider mb-8">
-                    Más de 50 colegios confían en Convive+</p>
+                    Más de 50 colegios confían en Convivia+</p>
                 <div class="flex flex-wrap justify-center items-center gap-10">
                     <div
                         class="flex items-center gap-2 opacity-50 grayscale hover:opacity-90 hover:grayscale-0 transition-all duration-300 cursor-default">
@@ -920,7 +955,7 @@
                     </div>
                     <p
                         class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] italic mb-8 leading-relaxed">
-                        "Antes perdíamos horas buscando el historial de un alumno en carpetas físicas. Con Convive+,
+                        "Antes perdíamos horas buscando el historial de un alumno en carpetas físicas. Con Convivia+,
                         en dos clics tenemos el expediente completo frente a los apoderados. Nos dio total respaldo
                         legal."
                     </p>
@@ -1011,7 +1046,7 @@
 
     <!-- Pricing Section -->
     <section
-        class="py-24 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] relative"
+        class="hidden py-24 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] relative"
         id="precios">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
@@ -1147,7 +1182,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative" id="faq">
+    <section class="hidden py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative" id="faq">
         <div class="max-w-4xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl md:text-5xl font-black mb-4">Preguntas Frecuentes</h2>
@@ -1170,7 +1205,7 @@
                         class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.2)]">
                         <div
                             class="p-6 text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]">
-                            Totalmente. Convive+ opera bajo infraestructuras de nube certificadas (AWS/Google Cloud)
+                            Totalmente. Convivia+ opera bajo infraestructuras de nube certificadas (AWS/Google Cloud)
                             cumpliendo con estrictas normativas de privacidad y encriptación de extremo a extremo. Los
                             datos no son accesibles para terceros.
                         </div>
@@ -1214,7 +1249,7 @@
                         class="faq-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.2)]">
                         <div
                             class="p-6 text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] text-sm leading-relaxed border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]">
-                            Sí. La estructura de Convive+ fue co-creada con inspectores generales para generar
+                            Sí. La estructura de Convivia+ fue co-creada con inspectores generales para generar
                             expedientes que cumplan al 100% con los requerimientos formales en caso de auditorías de
                             organismos reguladores escolares.
                         </div>
@@ -1384,7 +1419,7 @@
                             href="#">Características</a></li>
                     <li><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
                             href="#">Dashboard</a></li>
-                    <li><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
+                    <li class="hidden"><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
                             href="#">Precios</a></li>
                     <li><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
                             href="#">Demo</a></li>
@@ -1419,7 +1454,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-cp-text-muted dark:text-[theme(colors.cp.dark.text.muted)]">
-            <p>© 2024 Convive+. Todos los derechos reservados.</p>
+            <p>© 2024 Convivia+. Todos los derechos reservados.</p>
             <div class="flex gap-8 font-medium">
                 <a class="hover:text-cp-accent transition-colors" href="#">Privacidad</a>
                 <a class="hover:text-cp-accent transition-colors" href="#">Términos</a>
@@ -1605,7 +1640,71 @@
                 });
             }
         });
+
+        // --- UX/UI Dynamism Logic ---
+
+        // Dynamic Header
+        const header = document.getElementById('main-header');
+        const fab = document.getElementById('fab-contact');
+        
+        window.addEventListener('scroll', () => {
+            // Header transition
+            if (window.scrollY > 50) {
+                header.classList.remove('bg-transparent', 'border-transparent', 'py-2');
+                header.classList.add('bg-cp-surface/90', 'dark:bg-[theme(colors.cp.dark.surface.1)]/90', 'backdrop-blur-md', 'border-b', 'border-cp-border', 'dark:border-[theme(colors.cp.dark.border.DEFAULT)]', 'shadow-sm', 'py-0');
+            } else {
+                header.classList.add('bg-transparent', 'border-transparent', 'py-2');
+                header.classList.remove('bg-cp-surface/90', 'dark:bg-[theme(colors.cp.dark.surface.1)]/90', 'backdrop-blur-md', 'border-b', 'border-cp-border', 'dark:border-[theme(colors.cp.dark.border.DEFAULT)]', 'shadow-sm', 'py-0');
+            }
+            
+            // FAB visibility
+            if (window.scrollY > 600) {
+                fab.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            } else {
+                fab.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }
+        });
+
+        // Animated Counters using Intersection Observer
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = parseInt(target.getAttribute('data-target'));
+                    const duration = 2000; // ms
+                    const step = (finalValue / (duration / 16)); // assuming 60fps (~16ms per frame)
+                    let current = 0;
+                    
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < finalValue) {
+                            target.innerText = Math.ceil(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            target.innerText = finalValue;
+                        }
+                    };
+                    
+                    if(target.innerText === "0") { // Only run once
+                       updateCounter();
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => counterObserver.observe(counter));
     </script>
+
+    <!-- Floating Action Button (Sticky CTA) -->
+    <div id="fab-contact" class="fixed bottom-8 right-8 z-50 transition-all duration-500 transform translate-y-20 opacity-0 pointer-events-none">
+        <div class="relative group">
+            <div class="absolute -inset-2 bg-gradient-to-r from-cp-accent to-[#8B5CF6] rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+            <a href="#contacto" title="Solicitar Demostración" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.2)] text-cp-accent border border-cp-accent/50 shadow-2xl hover:scale-110 transition-transform duration-300">
+                <span class="material-symbols-outlined text-2xl">chat_bubble</span>
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>
