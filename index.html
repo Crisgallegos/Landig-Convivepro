@@ -19,6 +19,20 @@
     <meta property="og:image"
         content="https://lh3.googleusercontent.com/aida-public/AB6AXuCEoNIdALMoLtoewdOShHpWfyVYtLTlRx-cwFvhoXZrJABEU78N0Hd9RUd4FpQnFxAinWHAWOCDuGUudUWrpkJiJDg0v3JVyNCWrZOlrTKcapd6ALLuYJCiJPnRKI5YzpWE_avmJM1Quj7kX5otRYfnCLyPb6-nb7dyK5kUZ8CCkANSzLFcFhICfnkzuzmFHII2kn_bdV5sxCNy-fYzUX1Rcw5pieyVizTEZtWt4m6A6ZWELYydJ6QME4XSvek93h7PThjp952c6JA">
 
+    <!-- Twitter Cards & Canonical -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Convivia+ | Digitaliza la convivencia escolar">
+    <meta name="twitter:description"
+        content="Centraliza expedientes, evidencia y normativas en un ecosistema digital amigable.">
+    <meta name="twitter:image"
+        content="https://lh3.googleusercontent.com/aida-public/AB6AXuCEoNIdALMoLtoewdOShHpWfyVYtLTlRx-cwFvhoXZrJABEU78N0Hd9RUd4FpQnFxAinWHAWOCDuGUudUWrpkJiJDg0v3JVyNCWrZOlrTKcapd6ALLuYJCiJPnRKI5YzpWE_avmJM1Quj7kX5otRYfnCLyPb6-nb7dyK5kUZ8CCkANSzLFcFhICfnkzuzmFHII2kn_bdV5sxCNy-fYzUX1Rcw5pieyVizTEZtWt4m6A6ZWELYydJ6QME4XSvek93h7PThjp952c6JA">
+    <link rel="canonical" href="https://convivepro.com/" />
+
+    <!-- Performance (Preload & Preconnect) -->
+    <link rel="preload" as="image" href="img/hero_school.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <!-- Favicon oficial de ConvivePro -->
     <link rel="icon" type="image/svg+xml" href="img/logo/favicon.svg">
 
@@ -179,9 +193,15 @@
         }
 
         @keyframes flow {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
         }
+
         .animate-flow {
             animation: flow 2s linear infinite;
         }
@@ -243,9 +263,13 @@
             <button
                 class="hidden w-full text-center text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar
                 sesión</button>
-            <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+" target="_blank"
+            <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+"
+                target="_blank"
                 class="w-full flex justify-center items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5A] text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg shadow-[#25D366]/20 transition-all">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
                 Solicitar demostración
             </a>
         </div>
@@ -275,7 +299,7 @@
 
             <div class="flex items-center gap-4">
                 <!-- Theme Toggle Button -->
-                <button id="theme-toggle" type="button"
+                <button id="theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro"
                     class="text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:bg-cp-surface-2 dark:hover:bg-[theme(colors.cp.dark.surface.2)] focus:outline-none rounded-lg text-sm p-2.5 transition-colors">
                     <span id="theme-toggle-dark-icon" class="material-symbols-outlined hidden">light_mode</span>
                     <span id="theme-toggle-light-icon" class="material-symbols-outlined hidden">dark_mode</span>
@@ -284,13 +308,19 @@
                 <button
                     class="hidden text-sm font-bold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-brand transition-colors">Iniciar
                     sesión</button>
-                <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+" target="_blank"
+                <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+"
+                    target="_blank"
                     class="hidden lg:flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5A] text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-[#25D366]/20 hover:shadow-[#25D366]/40 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 relative overflow-hidden group">
                     <span class="relative z-10 flex items-center gap-2">
-                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
                         Solicitar demostración
                     </span>
-                    <div class="absolute inset-0 h-full w-full bg-white/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-out z-0"></div>
+                    <div
+                        class="absolute inset-0 h-full w-full bg-white/10 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-out z-0">
+                    </div>
                 </a>
 
                 <!-- Hamburguer Button Mobile -->
@@ -308,30 +338,45 @@
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div class="z-10 reveal">
                 <span
-                    class="inline-block py-1.5 px-4 rounded-full bg-[rgba(30,58,95,0.08)] dark:bg-[rgba(238,244,251,0.1)] text-cp-brand dark:text-cp-brand-muted text-xs font-bold tracking-wider uppercase mb-6 border border-cp-brand/10 backdrop-blur-sm shadow-sm">
-                    ✨ Nueva era en gestión escolar
+                    class="inline-flex items-center gap-1.5 py-1.5 px-4 rounded-full bg-[rgba(30,58,95,0.08)] dark:bg-[rgba(238,244,251,0.1)] text-cp-brand dark:text-cp-brand-muted text-xs font-bold tracking-wider uppercase mb-6 border border-cp-brand/10 backdrop-blur-sm shadow-sm w-fit">
+                    <span class="material-symbols-outlined text-[14px]">groups</span>
+                    Co-creado con Inspectores y Encargados de convivencia escolar
                 </span>
                 <h1
                     class="text-5xl lg:text-7xl font-black leading-tight mb-8 text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)]">
-                    Digitaliza la gestión de <br class="hidden lg:block" />
+                    Libérate del papel y centraliza la <br class="hidden lg:block" />
                     <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-cp-brand to-cp-accent inline-block overflow-visible py-2">
                         convivencia escolar
-                    </span><br class="hidden lg:block" /> en tu colegio
+                    </span>
                 </h1>
                 <p
                     class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mb-10 leading-relaxed max-w-xl reveal reveal-delay-1">
-                    Reemplaza el papel y centraliza el registro de incidentes, evidencias y seguimiento de casos para
-                    tomar decisiones disciplinarias informadas.
+                    El software diseñado para equipos Encargados de Convivencia Escolar e inspectores. Ahorra 40% de
+                    tiempo en tareas
+                    administrativas y toma decisiones respaldadas por datos.
                 </p>
                 <div class="flex flex-wrap gap-4 reveal reveal-delay-2">
-                    <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-cp-accent to-[#8B5CF6] rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                        <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+" target="_blank"
-                            class="relative inline-flex bg-cp-bg hover:bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] dark:hover:bg-[theme(colors.cp.dark.surface.1)] text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] border border-[#25D366]/50 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 items-center gap-2 active:scale-95">
-                            Solicitar demostración <span class="text-[#25D366] font-bold hidden sm:block">por WhatsApp</span>
-                            <svg class="w-5 h-5 fill-current text-[#25D366] transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <div class="relative group flex flex-col items-start">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-cp-accent to-[#8B5CF6] rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse z-0">
+                        </div>
+                        <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+"
+                            target="_blank"
+                            class="relative z-10 inline-flex bg-cp-bg hover:bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] dark:hover:bg-[theme(colors.cp.dark.surface.1)] text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] border border-[#25D366]/50 px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 items-center gap-2 active:scale-95">
+                            Solicitar demostración <span class="text-[#25D366] font-bold hidden sm:block">por
+                                WhatsApp</span>
+                            <svg class="w-5 h-5 fill-current text-[#25D366] transform group-hover:translate-x-1 transition-transform"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
                         </a>
+                        <span
+                            class="text-xs text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mt-3 flex items-center gap-1 font-medium z-10 mx-auto">
+                            <span class="material-symbols-outlined text-[14px]">bolt</span>
+                            Respuesta rápida. Sin compromiso.
+                        </span>
                     </div>
                     <a href="#proceso"
                         class="inline-flex items-center gap-2 px-6 py-4 rounded-xl text-base font-semibold text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] hover:text-cp-accent dark:hover:text-cp-accent transition-colors duration-300 active:scale-95">
@@ -347,7 +392,7 @@
                 </div>
             </div>
 
-            <div class="relative reveal reveal-delay-2 lg:ml-8 animate-float">
+            <div class="relative reveal reveal-delay-2 lg:ml-8 animate-float hidden lg:block">
                 <!-- Decorative animated blobs -->
                 <div
                     class="absolute top-0 -left-4 w-72 h-72 bg-cp-accent rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob">
@@ -374,7 +419,8 @@
                     <div
                         class="bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex-1 p-4 overflow-hidden group flex items-center justify-center relative">
                         <div class="w-full h-full rounded-lg bg-cover bg-no-repeat bg-center border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-inner transform group-hover:scale-105 transition-transform duration-1000"
-                            data-alt="Encargado de Convivencia Escolar trabajando en un computador en su oficina"
+                            role="img"
+                            aria-label="Encargado de Convivencia Escolar trabajando en un computador en su oficina"
                             style="background-image: url('img/hero_school.png');">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/20 to-transparent">
@@ -404,23 +450,35 @@
     </section>
 
     <!-- Dynamic Impact Counters -->
-    <section class="py-12 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] border-y border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] relative z-20 overflow-hidden">
+    <section
+        class="py-12 bg-cp-surface dark:bg-[theme(colors.cp.dark.surface.2)] border-y border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] relative z-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-cp-border dark:divide-[theme(colors.cp.dark.border.DEFAULT)]">
+            <div
+                class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-cp-border dark:divide-[theme(colors.cp.dark.border.DEFAULT)]">
                 <div class="text-center px-4 reveal">
-                    <p class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cp-accent to-cp-brand dark:to-cp-brand-muted mb-2"><span class="counter" data-target="100">0</span>%</p>
+                    <p
+                        class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cp-accent to-cp-brand dark:to-cp-brand-muted mb-2">
+                        <span class="counter" data-target="100">0</span>%
+                    </p>
                     <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">Trazabilidad</p>
                 </div>
                 <div class="text-center px-4 reveal reveal-delay-1">
-                    <p class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cp-brand to-[#8B5CF6] mb-2"><span class="counter" data-target="100">0</span></p>
+                    <p
+                        class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cp-brand to-[#8B5CF6] mb-2">
+                        <span class="counter" data-target="100">0</span>
+                    </p>
                     <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">% Papel Eliminado</p>
                 </div>
                 <div class="text-center px-4 reveal reveal-delay-2">
-                    <p class="text-4xl lg:text-5xl font-black text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] mb-2"><span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span></p>
+                    <p
+                        class="text-4xl lg:text-5xl font-black text-cp-text dark:text-[theme(colors.cp.dark.text.DEFAULT)] mb-2">
+                        <span class="counter" data-target="24">0</span>/<span class="counter" data-target="7">0</span>
+                    </p>
                     <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">Acceso a datos</p>
                 </div>
                 <div class="text-center px-4 reveal reveal-delay-3">
-                    <p class="text-4xl lg:text-5xl font-black text-[theme(colors.cp.semantic.success.DEFAULT)] mb-2">+<span class="counter" data-target="40">0</span>%</p>
+                    <p class="text-4xl lg:text-5xl font-black text-[theme(colors.cp.semantic.success.DEFAULT)] mb-2">
+                        +<span class="counter" data-target="40">0</span>%</p>
                     <p class="text-xs font-bold text-cp-text-secondary uppercase tracking-wider">Tiempo ahorrado</p>
                 </div>
             </div>
@@ -514,6 +572,7 @@
         <!-- Lifestyle Banner Transition -->
         <div class="max-w-7xl mx-auto px-6 relative z-10 mb-20 reveal">
             <div class="w-full h-64 md:h-96 rounded-3xl bg-cover bg-center shadow-2xl relative overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]"
+                role="img" aria-label="Estudiantes felices y seguros en el patio del colegio"
                 style="background-image: url('img/students.png');">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-cp-brand/80 via-cp-brand/20 to-transparent flex items-end p-8 md:p-12">
@@ -533,10 +592,15 @@
                     <h2 class="text-4xl lg:text-5xl font-black leading-tight mb-8">La solución centralizada para un
                         colegio organizado</h2>
                     <p
-                        class="text-lg text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mb-8 leading-relaxed">
+                        class="text-lg text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)] mb-4 leading-relaxed">
                         Convivia+ centraliza tus registros, otorga orden administrativo, asegura el control total de los
                         expedientes y garantiza la trazabilidad de cada acción disciplinaria tomada por el equipo.
                     </p>
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[theme(colors.cp.semantic.info.bg)] text-[theme(colors.cp.semantic.info.text)] dark:bg-blue-900/30 dark:text-blue-300 text-sm font-semibold mb-8 border border-[theme(colors.cp.semantic.info.DEFAULT)]/20 shadow-sm">
+                        <span class="material-symbols-outlined text-base">verified</span>
+                        Diseñado desde cero en conjunto con Inspectores y Equipos Psicosociales.
+                    </div>
                     <div class="space-y-6">
                         <div
                             class="flex items-start gap-4 p-4 rounded-xl hover:bg-cp-surface dark:hover:bg-[theme(colors.cp.dark.surface.1)] transition-colors duration-300 border border-transparent hover:border-cp-border dark:hover:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-sm hover:shadow-md">
@@ -784,8 +848,11 @@
 
             <div class="relative grid grid-cols-1 md:grid-cols-5 gap-8">
                 <!-- Connective Line -->
-                <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-white/10 z-0 overflow-hidden rounded-full">
-                    <div class="w-full h-full bg-gradient-to-r from-transparent via-cp-accent to-transparent animate-flow"></div>
+                <div
+                    class="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-white/10 z-0 overflow-hidden rounded-full">
+                    <div
+                        class="w-full h-full bg-gradient-to-r from-transparent via-cp-accent to-transparent animate-flow">
+                    </div>
                 </div>
 
                 <div class="flex flex-col items-center text-center group relative z-10 reveal">
@@ -851,7 +918,7 @@
                     <div
                         class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
                         <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                            data-alt="Screenshot of incident registration form"
+                            role="img" aria-label="Captura del formulario de registro de incidentes"
                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3j-pflm7sASawiUli01e8WzKBPZ93sB1MRdjRu5WtXNkWmJF43Ono0GPsHoUqxFzMQw6krBUoEP64QY1YiE02pkELGWm8jgN8R3rYaTtfSY_KTLIxRTL3W9FTF1KFF89y0iYQfejPyzYsgs5Q1iN2fJy9SQmxnv3wPM_IE-o493ynwLCqWyg-bY0QVbQ7gmUK3qpiCxBVV3AQxJnpfxbMCvmxC6qxztO3oKllezvLp7k10Qxgi_CufIYQ80Ir3CRgT3y4qVBoID4');">
                         </div>
                         <div
@@ -868,7 +935,7 @@
                     <div
                         class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
                         <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                            data-alt="Screenshot of main statistics dashboard"
+                            role="img" aria-label="Captura del panel de estadísticas y dashboard principal"
                             style="background-image: url('img/img1.png');">
                         </div>
 
@@ -886,7 +953,7 @@
                     <div
                         class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
                         <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                            data-alt="Screenshot of student profile and disciplinary history"
+                            role="img" aria-label="Captura del perfil del estudiante y su historial disciplinario"
                             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMVcrigKX-_25GqvCJtcwveNsdBzMcO0XcGW6upvsj95LzhsqeZsMgBo0y-9QO-TBeszPI4DVZtEO93v_IwTv5ei9mHJ75RPlTyb3G3yJEqVeFVL_5X9jpZIZswJaaOYxU6zF6vrs88YbcgvDrSpyDQYJtIOPU09M7o01m4ED7MhPsTgF1qTYossiJ-igw5UfNKgyJD7ZhiTynNdAgyNFsi39GOsSCb6q9sTl7gtsHOaRxQWSaxtTipSBG0QB-_HdcHPsGu-J91lc');">
                         </div>
                         <div
@@ -1287,14 +1354,18 @@
                             Transforma la gestión de convivencia escolar en tu establecimiento
                         </h2>
                         <p class="text-lg text-white/80 mb-10 leading-relaxed max-w-lg mx-auto">
-                            Escríbenos directamente por WhatsApp para resolver tus dudas al instante o agendar una demostración personalizada. El proceso toma solo un par de clics.
+                            Escríbenos directamente por WhatsApp para resolver tus dudas al instante o agendar una
+                            demostración personalizada. El proceso toma solo un par de clics.
                         </p>
 
                         <div class="flex justify-center">
-                            <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+" target="_blank"
+                            <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+"
+                                target="_blank"
                                 class="inline-flex bg-[#25D366] hover:bg-[#1EBE5A] text-white px-10 py-5 rounded-2xl text-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg hover:shadow-[#25D366]/40 active:scale-95 items-center justify-center gap-3">
-                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                                 </svg>
                                 Hablar por WhatsApp
                             </a>
@@ -1339,7 +1410,8 @@
                             href="#">Características</a></li>
                     <li><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
                             href="#">Dashboard</a></li>
-                    <li class="hidden"><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
+                    <li class="hidden"><a
+                            class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
                             href="#">Precios</a></li>
                     <li><a class="hover:text-cp-accent hover:translate-x-2 transition-transform inline-block"
                             href="#">Demo</a></li>
@@ -1510,7 +1582,7 @@
         // Dynamic Header
         const header = document.getElementById('main-header');
         const fab = document.getElementById('fab-contact');
-        
+
         window.addEventListener('scroll', () => {
             // Header transition
             if (window.scrollY > 50) {
@@ -1532,7 +1604,7 @@
                     const duration = 2000; // ms
                     const step = (finalValue / (duration / 16)); // assuming 60fps (~16ms per frame)
                     let current = 0;
-                    
+
                     const updateCounter = () => {
                         current += step;
                         if (current < finalValue) {
@@ -1542,24 +1614,29 @@
                             target.innerText = finalValue;
                         }
                     };
-                    
-                    if(target.innerText === "0") { // Only run once
-                       updateCounter();
+
+                    if (target.innerText === "0") { // Only run once
+                        updateCounter();
                     }
                 }
             });
         }, { threshold: 0.5 });
-        
+
         counters.forEach(counter => counterObserver.observe(counter));
     </script>
 
     <!-- Floating Action Button (Sticky WhatsApp) -->
-    <div id="fab-contact" class="fixed bottom-8 right-8 z-50 transition-all duration-500 transform">
+    <div id="fab-contact" class="fixed bottom-8 right-8 z-50 transition-all duration-500 transform lg:hidden">
         <div class="relative group">
-            <div class="absolute -inset-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
-            <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp" class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform duration-300">
+            <div
+                class="absolute -inset-2 bg-gradient-to-r from-[#25D366] to-[#128C7E] rounded-full blur opacity-70 group-hover:opacity-100 transition duration-500 animate-pulse">
+            </div>
+            <a href="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20una%20demostraci%C3%B3n%20de%20Convivia+"
+                target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp"
+                class="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:scale-110 transition-transform duration-300">
                 <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
             </a>
         </div>
