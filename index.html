@@ -29,12 +29,12 @@
     <link rel="canonical" href="https://convivepro.com/" />
 
     <!-- Performance (Preload & Preconnect) -->
-    <link rel="preload" as="image" href="img/hero_school.png">
+    <link rel="preload" as="image" href="assets/img/hero_school.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon oficial de ConvivePro -->
-    <link rel="icon" type="image/svg+xml" href="img/logo/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo/favicon.svg">
 
     <!-- Evitar parpadeos de FOUC con el dark mode -->
     <script>
@@ -137,92 +137,7 @@
             },
         }
     </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            transition: all 0.3s ease;
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-delay-1 {
-            transition-delay: 0.1s;
-        }
-
-        .reveal-delay-2 {
-            transition-delay: 0.2s;
-        }
-
-        .reveal-delay-3 {
-            transition-delay: 0.3s;
-        }
-
-        /* Menu animations */
-        #mobile-menu {
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(100%);
-        }
-
-        #mobile-menu.open {
-            transform: translateX(0);
-        }
-
-        .backdrop {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .backdrop.open {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        @keyframes flow {
-            0% {
-                transform: translateX(-100%);
-            }
-
-            100% {
-                transform: translateX(100%);
-            }
-        }
-
-        .animate-flow {
-            animation: flow 2s linear infinite;
-        }
-
-        /* Respect user's motion preferences (WCAG 2.1 AA) */
-        @media (prefers-reduced-motion: reduce) {
-
-            .animate-float,
-            .animate-blob,
-            .animate-flow,
-            .animate-pulse-glow {
-                animation: none !important;
-            }
-
-            .reveal {
-                opacity: 1 !important;
-                transform: none !important;
-                transition: none !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body
@@ -281,7 +196,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center group cursor-pointer">
                 <!-- Logo completo en todas las resoluciones -->
-                <img src="img/logo/logoweb2.svg" alt="ConvivePro Logo"
+                <img src="assets/img/logo/logoweb2.svg" alt="ConvivePro Logo"
                     class="w-56 md:w-80 lg:w-[200px] h-auto transition-opacity duration-300 group-hover:opacity-80">
             </a>
 
@@ -421,7 +336,7 @@
                         <div class="w-full h-full rounded-lg bg-cover bg-no-repeat bg-center border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-inner transform group-hover:scale-105 transition-transform duration-1000"
                             role="img"
                             aria-label="Encargado de Convivencia Escolar trabajando en un computador en su oficina"
-                            style="background-image: url('img/hero_school.png');">
+                            style="background-image: url('assets/img/hero_school.png');">
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/20 to-transparent">
                             </div>
@@ -563,7 +478,8 @@
     </section>
 
     <!-- Solution Section & Features -->
-    <section class="py-16 lg:py-24 relative overflow-hidden bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)]" id="caracteristicas">
+    <section class="py-16 lg:py-24 relative overflow-hidden bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)]"
+        id="caracteristicas">
         <div class="absolute inset-0 bg-[#1E3A5F] opacity-[0.03] dark:opacity-0"></div>
         <div
             class="absolute -right-40 top-40 w-96 h-96 bg-[rgba(30,58,95,0.08)] blur-[120px] rounded-full dark:bg-cp-brand/20">
@@ -573,7 +489,7 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10 mb-20 reveal">
             <div class="w-full h-64 md:h-96 rounded-3xl bg-cover bg-center shadow-2xl relative overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)]"
                 role="img" aria-label="Estudiantes felices y seguros en el patio del colegio"
-                style="background-image: url('img/students.png');">
+                style="background-image: url('assets/img/students.png');">
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-cp-brand/80 via-cp-brand/20 to-transparent flex items-end p-8 md:p-12">
                     <h3 class="text-2xl md:text-4xl font-black text-white max-w-2xl leading-tight">
@@ -796,7 +712,7 @@
                             <h5 class="text-sm font-bold text-[#A78BFA] mb-3 flex items-center gap-2">
                                 <span class="material-symbols-outlined text-base">verified</span> Análisis Normativo
                             </h5>
-                            <p class="text-sm text-white/80 mb-4 leading-relaxed">
+                            <p id="ai-typing-text" class="text-sm text-white/80 mb-4 leading-relaxed">
                                 Según el <strong>Artículo 48</strong> del Reglamento Interno, esta conducta clasifica
                                 como <strong class="text-white">Falta Gravísima (Ciberacoso)</strong> al vulnerar la
                                 intimidad y dignidad del estudiante.
@@ -822,6 +738,72 @@
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Captures -->
+    <section class="py-32 bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.1)]" id="capturas">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Tus Beneficios</span>
+                <h2 class="text-4xl md:text-5xl font-black mb-6">¿Por qué elegir Convivia+?</h2>
+                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Convivia+
+                    transforma la gestión diaria de tu establecimiento en resultados medibles.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="flex flex-col gap-6 group reveal">
+                    <div
+                        class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
+                        <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
+                            role="img" aria-label="Captura del formulario de registro de incidentes"
+                            style="background-image: url('assets/img/estadistica.png');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span
+                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Ahorro
+                                de tiempo</span>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-xl text-center">Mayor organización operativa</h4>
+                </div>
+
+                <div class="flex flex-col gap-6 group reveal reveal-delay-1">
+                    <div
+                        class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
+                        <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
+                            role="img" aria-label="Captura del panel de estadísticas y dashboard principal"
+                            style="background-image: url('assets/img/img1.png');">
+                        </div>
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span
+                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Información
+                                clara</span>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-xl text-center">Decisiones informadas y transparencia</h4>
+                </div>
+
+                <div class="flex flex-col gap-6 group reveal reveal-delay-2">
+                    <div
+                        class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
+                        <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
+                            role="img" aria-label="Captura del perfil del estudiante y su historial disciplinario"
+                            style="background-image: url('assets/img/incidentes.png');">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <span
+                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Tracking
+                                total</span>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-xl text-center">Seguimiento claro de casos</h4>
                 </div>
             </div>
         </div>
@@ -903,74 +885,9 @@
         </div>
     </section>
 
-    <!-- System Captures -->
-    <section class="py-32 bg-cp-bg dark:bg-[theme(colors.cp.dark.surface.1)]" id="capturas">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 reveal">
-                <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Tus Beneficios</span>
-                <h2 class="text-4xl md:text-5xl font-black mb-6">¿Por qué elegir Convivia+?</h2>
-                <p class="text-xl text-cp-text-secondary dark:text-[theme(colors.cp.dark.text.secondary)]">Convivia+
-                    transforma la gestión diaria de tu establecimiento en resultados medibles.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-3 gap-10">
-                <div class="flex flex-col gap-6 group reveal">
-                    <div
-                        class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
-                        <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                            role="img" aria-label="Captura del formulario de registro de incidentes"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3j-pflm7sASawiUli01e8WzKBPZ93sB1MRdjRu5WtXNkWmJF43Ono0GPsHoUqxFzMQw6krBUoEP64QY1YiE02pkELGWm8jgN8R3rYaTtfSY_KTLIxRTL3W9FTF1KFF89y0iYQfejPyzYsgs5Q1iN2fJy9SQmxnv3wPM_IE-o493ynwLCqWyg-bY0QVbQ7gmUK3qpiCxBVV3AQxJnpfxbMCvmxC6qxztO3oKllezvLp7k10Qxgi_CufIYQ80Ir3CRgT3y4qVBoID4');">
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <span
-                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Ahorro
-                                de tiempo</span>
-                        </div>
-                    </div>
-                    <h4 class="font-bold text-xl text-center">Mayor organización operativa</h4>
-                </div>
-
-                <div class="flex flex-col gap-6 group reveal reveal-delay-1">
-                    <div
-                        class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
-                        <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                            role="img" aria-label="Captura del panel de estadísticas y dashboard principal"
-                            style="background-image: url('img/img1.png');">
-                        </div>
-
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <span
-                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Información
-                                clara</span>
-                        </div>
-                    </div>
-                    <h4 class="font-bold text-xl text-center">Decisiones informadas y transparencia</h4>
-                </div>
-
-                <div class="flex flex-col gap-6 group reveal reveal-delay-2">
-                    <div
-                        class="aspect-[4/3] bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] rounded-2xl overflow-hidden border border-cp-border dark:border-[theme(colors.cp.dark.border.DEFAULT)] shadow-lg group-hover:shadow-2xl group-hover:-translate-y-2 group-hover:border-cp-accent/50 transition-all duration-500 relative">
-                        <div class="w-full h-full bg-center bg-cover transform group-hover:scale-105 transition-transform duration-700"
-                            role="img" aria-label="Captura del perfil del estudiante y su historial disciplinario"
-                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMVcrigKX-_25GqvCJtcwveNsdBzMcO0XcGW6upvsj95LzhsqeZsMgBo0y-9QO-TBeszPI4DVZtEO93v_IwTv5ei9mHJ75RPlTyb3G3yJEqVeFVL_5X9jpZIZswJaaOYxU6zF6vrs88YbcgvDrSpyDQYJtIOPU09M7o01m4ED7MhPsTgF1qTYossiJ-igw5UfNKgyJD7ZhiTynNdAgyNFsi39GOsSCb6q9sTl7gtsHOaRxQWSaxtTipSBG0QB-_HdcHPsGu-J91lc');">
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[theme(colors.cp.text.DEFAULT)]/80 dark:from-[theme(colors.cp.dark.bg)]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <span
-                                class="text-cp-text-inverse font-bold bg-cp-accent/90 px-4 py-2 rounded-full text-sm shadow-xl backdrop-blur-sm">Tracking
-                                total</span>
-                        </div>
-                    </div>
-                    <h4 class="font-bold text-xl text-center">Seguimiento claro de casos</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Social Proof (Testimonios) -->
-    <section class="hidden py-16 lg:py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative overflow-hidden" id="testimonios">
+    <section class="hidden py-16 lg:py-24 bg-cp-bg dark:bg-[theme(colors.cp.dark.bg)] relative overflow-hidden"
+        id="testimonios">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <span class="text-cp-accent font-bold tracking-wider uppercase text-sm mb-4 block">Testimonios</span>
@@ -1382,7 +1299,7 @@
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
             <div class="col-span-2">
                 <div class="mb-8">
-                    <img src="img/logo/logoweb2.svg" alt="ConvivePro Logo"
+                    <img src="assets/img/logo/logoweb2.svg" alt="ConvivePro Logo"
                         class="w-80 lg:w-[320px] h-auto opacity-90 hover:opacity-100 transition-opacity duration-300">
                 </div>
                 <p
@@ -1427,19 +1344,19 @@
                                 class="w-8 h-8 rounded-full bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex justify-center items-center group-hover:bg-[rgba(30,58,95,0.08)] group-hover:text-cp-brand transition-colors">
                                 <span class="material-symbols-outlined text-sm">mail</span>
                             </div>
-                            contacto@convivepro.com
+                            contacto@convivia.com
                         </a></li>
                     <li><a href="#" class="flex items-center gap-3 hover:text-cp-accent transition-colors group">
                             <div
                                 class="w-8 h-8 rounded-full bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex justify-center items-center group-hover:bg-[rgba(30,58,95,0.08)] group-hover:text-cp-brand transition-colors">
                                 <span class="material-symbols-outlined text-sm">call</span>
-                            </div> +56 9 1234 5678
+                            </div> +569 6655 6781
                         </a></li>
                     <li><span class="flex items-center gap-3">
                             <div
                                 class="w-8 h-8 rounded-full bg-cp-surface-2 dark:bg-[theme(colors.cp.dark.surface.2)] flex justify-center items-center">
                                 <span class="material-symbols-outlined text-sm">location_on</span>
-                            </div> Santiago, Chile
+                            </div> Los Angeles, Chile
                         </span></li>
                 </ul>
             </div>
@@ -1456,174 +1373,7 @@
     </footer>
 
     <!-- Interactive Custom Scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // 1. Intersection Observer for scroll animations
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, { root: null, rootMargin: '0px', threshold: 0.15 });
-
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-
-            // 2. FAQ Accordion Logic
-            const faqButtons = document.querySelectorAll('.faq-btn');
-            faqButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const content = btn.nextElementSibling;
-                    const icon = btn.querySelector('.faq-icon');
-                    // Toggle current
-                    if (content.style.maxHeight) {
-                        content.style.maxHeight = null;
-                        icon.style.transform = "rotate(0deg)";
-                    } else {
-                        // Close all others
-                        document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = null);
-                        document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = "rotate(0deg)");
-                        // Open current
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        icon.style.transform = "rotate(180deg)";
-                    }
-                });
-            });
-
-
-            // 3. Dark Mode Toggle Logic
-            const themeToggleBtn = document.getElementById('theme-toggle');
-            const darkIcon = document.getElementById('theme-toggle-dark-icon');
-            const lightIcon = document.getElementById('theme-toggle-light-icon');
-
-            // Set initial icon based on theme
-            if (document.documentElement.classList.contains('dark')) {
-                lightIcon.classList.remove('hidden');
-            } else {
-                darkIcon.classList.remove('hidden');
-            }
-
-            themeToggleBtn.addEventListener('click', function () {
-                darkIcon.classList.toggle('hidden');
-                lightIcon.classList.toggle('hidden');
-
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
-            });
-
-
-            // 4. Mobile Menu Drawer Logic
-            const mobileMenuBtn = document.getElementById('hamburger-menu');
-            const closeMenuBtn = document.getElementById('close-menu');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuBackdrop = document.getElementById('menu-backdrop');
-
-            function toggleMenu() {
-                mobileMenu.classList.toggle('open');
-                menuBackdrop.classList.toggle('hidden');
-                // Trigger reflow to apply opacity transition
-                void menuBackdrop.offsetWidth;
-                menuBackdrop.classList.toggle('open');
-            }
-
-            mobileMenuBtn.addEventListener('click', toggleMenu);
-            closeMenuBtn.addEventListener('click', toggleMenu);
-            menuBackdrop.addEventListener('click', toggleMenu);
-            // Close menu when a link inside is clicked
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', toggleMenu);
-            });
-
-
-            // 5. Pricing Toggle (Mensual / Anual)
-            const btnMonthly = document.getElementById('toggle-monthly');
-            const btnAnnual = document.getElementById('toggle-annual');
-            const prices = [
-                document.getElementById('price-basic'),
-                document.getElementById('price-pro'),
-                document.getElementById('price-premium')
-            ];
-
-            const activeClass = ['bg-cp-brand', 'text-white', 'shadow-md'];
-            const inactiveClass = ['text-cp-text-secondary'];
-
-            function setToggle(mode) {
-                prices.forEach(el => {
-                    if (el) el.textContent = el.dataset[mode];
-                });
-                if (mode === 'monthly') {
-                    activeClass.forEach(c => btnMonthly.classList.add(c));
-                    inactiveClass.forEach(c => btnMonthly.classList.remove(c));
-                    inactiveClass.forEach(c => btnAnnual.classList.add(c));
-                    activeClass.forEach(c => btnAnnual.classList.remove(c));
-                } else {
-                    activeClass.forEach(c => btnAnnual.classList.add(c));
-                    inactiveClass.forEach(c => btnAnnual.classList.remove(c));
-                    inactiveClass.forEach(c => btnMonthly.classList.add(c));
-                    activeClass.forEach(c => btnMonthly.classList.remove(c));
-                }
-            }
-
-            if (btnMonthly && btnAnnual) {
-                btnMonthly.addEventListener('click', () => setToggle('monthly'));
-                btnAnnual.addEventListener('click', () => setToggle('annual'));
-            }
-        });
-
-
-        // --- UX/UI Dynamism Logic ---
-
-        // Dynamic Header
-        const header = document.getElementById('main-header');
-        const fab = document.getElementById('fab-contact');
-
-        window.addEventListener('scroll', () => {
-            // Header transition
-            if (window.scrollY > 50) {
-                header.classList.remove('bg-transparent', 'border-transparent', 'py-2');
-                header.classList.add('bg-cp-surface/90', 'dark:bg-[theme(colors.cp.dark.surface.1)]/90', 'backdrop-blur-md', 'border-b', 'border-cp-border', 'dark:border-[theme(colors.cp.dark.border.DEFAULT)]', 'shadow-sm', 'py-0');
-            } else {
-                header.classList.add('bg-transparent', 'border-transparent', 'py-2');
-                header.classList.remove('bg-cp-surface/90', 'dark:bg-[theme(colors.cp.dark.surface.1)]/90', 'backdrop-blur-md', 'border-b', 'border-cp-border', 'dark:border-[theme(colors.cp.dark.border.DEFAULT)]', 'shadow-sm', 'py-0');
-            }
-        });
-
-        // Animated Counters using Intersection Observer
-        const counters = document.querySelectorAll('.counter');
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = entry.target;
-                    const finalValue = parseInt(target.getAttribute('data-target'));
-                    const duration = 2000; // ms
-                    const step = (finalValue / (duration / 16)); // assuming 60fps (~16ms per frame)
-                    let current = 0;
-
-                    const updateCounter = () => {
-                        current += step;
-                        if (current < finalValue) {
-                            target.innerText = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            target.innerText = finalValue;
-                        }
-                    };
-
-                    if (target.innerText === "0") { // Only run once
-                        updateCounter();
-                    }
-                }
-            });
-        }, { threshold: 0.5 });
-
-        counters.forEach(counter => counterObserver.observe(counter));
-    </script>
+    <script src="assets/js/main.js"></script>
 
     <!-- Floating Action Button (Sticky WhatsApp) -->
     <div id="fab-contact" class="fixed bottom-8 right-8 z-50 transition-all duration-500 transform lg:hidden">
